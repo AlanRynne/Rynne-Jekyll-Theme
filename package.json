@@ -4,7 +4,9 @@
   "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
   "main": "assets/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "browserify": "browserify assets/js/main.js -o assets/js/bundle.js",
+    "insert-yaml": "echo '---\n---\n' | cat - assets/js/bundle.js > temp && mv temp assets/js/bundle.js",
+    "build-js": "npm run browserify && npm run insert-yaml"
   },
   "author": "",
   "license": "ISC",
