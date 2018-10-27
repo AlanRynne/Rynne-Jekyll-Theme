@@ -5,18 +5,15 @@
 
 
 <body>
-    {% case page.layout %}
-        {% when 'blog' %}
+
            {% include header-blog.html %}
-        {% else %}
-            {% include header-default.html %}
-    {% endcase %}
+
 
     <section class="container">
         <!-- <div class="columns is-centered">
             
             <div class="column is-7"> -->
-                <div class="content">
+                <div class="content post-list">
                     {{ content | inject_anchors }}
                 </div>
 
