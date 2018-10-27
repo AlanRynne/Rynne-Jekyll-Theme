@@ -1,5 +1,13 @@
 
 // -----------------
+// Load Simple-Jekyll-Search from NPM
+// -----------------
+const SJS = require('simple-jekyll-search')
+// -----------------
+
+
+
+// -----------------
 // Load Particles.js from NPM
 // -----------------
 const particles = require('particles.js');
@@ -9,10 +17,12 @@ particlesJS.load('particles-js', '{{site.url}}/assets/particles.json', function 
 });
 // -----------------
 
+
+
 // -----------------
 // Load Three.js from NPM
 // -----------------
-var THREE = require('three');
+const THREE = require('three');
 
 // -----------------
 

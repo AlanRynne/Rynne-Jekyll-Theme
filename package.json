@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
   "main": "assets/js/main.js",
+  "watch": {
+    "build-js": "assets/js/main.js"
+  },
   "scripts": {
+    "watch": "npm-watch",
+    "serve": "jekyll serve",
     "browserify": "browserify assets/js/main.js -o assets/js/bundle.js",
     "insert-yaml": "echo '---\n---\n' | cat - assets/js/bundle.js > temp && mv temp assets/js/bundle.js",
     "build-js": "npm run browserify && npm run insert-yaml"
@@ -12,7 +17,9 @@
   "license": "ISC",
   "dependencies": {
     "assert": "^1.4.1",
+    "npm-watch": "^0.4.0",
     "particles.js": "^2.0.0",
+    "simple-jekyll-search": "^1.7.0",
     "three": "^0.97.0"
   }
 }
