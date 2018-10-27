@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+
+<body>
+
+    {% include header-default.html %}
+
+    <section class="section">
+        <div class="columns is-centered">
+            
+            <div class="column is-7">
+                <div class="content">
+                    {{ content | inject_anchors }}
+                </div>
+
+            </div>
+            {% if page.toc %}
+            <aside class="column is-2">
+                <div class="box" id="page_sidebar">
+                    <div class="content">
+                            <h5>TOC</h5>
+                            {{ content | toc_only}}
+                        </div>
+                    </div>
+            </aside>
+            {% endif %}
+        </div>
+    </section>
+
+    {% include footer-default.html %}
+
+</body>
+
+
+</html>

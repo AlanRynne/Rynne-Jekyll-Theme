@@ -1,0 +1,38 @@
+# Where things are
+source              : .
+destination         : ./_site
+
+
+collections:
+  posts:
+    output          : true
+    permalink       : /posts/:name
+  pages:
+    output          : true
+    permalink       : /:name
+  projects:
+    output          : true
+
+# Plugins
+whitelist           : []
+plugins             : 
+  - jekyll-toc
+
+toc:
+  max_level: 2 # default: 6
+
+title: This is the site title
+subtitle: The site subtitle!
+
+main_nav:
+- title: Home
+  url: /
+- title: About Me
+  url: /about
+- title: Something else
+  url: /some2
+- title: Go to author's site
+  url: http://rynne.es
+  button: true
+  icon: fas fa-envelope
+  external: true
