@@ -2,11 +2,13 @@
 source              : .
 destination         : ./_site
 
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 collections:
   posts:
     output          : true
-    permalink       : /posts/:name
+    permalink       : /blog/:year/:month/:name
   pages:
     output          : true
     permalink       : /:name
@@ -17,6 +19,7 @@ collections:
 whitelist           : []
 plugins             : 
   - jekyll-toc
+  - jekyll-paginate
 
 toc:
   max_level: 2 # default: 6
@@ -29,8 +32,8 @@ main_nav:
   url: /
 - title: About Me
   url: /about
-- title: Something else
-  url: /some2
+- title: blog
+  url: /blog
 - title: Go to author's site
   url: http://rynne.es
   button: true
