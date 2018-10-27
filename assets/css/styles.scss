@@ -113,3 +113,45 @@ a{
 	position: sticky !important;
 	top: 2em !important;
 }
+
+// Remove list bullets from pagination
+.pagination{
+	ul{
+		li{
+			list-style-type: none;
+		}
+	}
+}
+@media screen and (min-width: $desktop)
+{
+.post-list{
+	position: relative;
+	top: -8em;
+
+	.post-entry{
+		margin-block-end: 2em;
+		margin-block-start: 0;
+	}
+	.media{
+		height: 400px !important;
+	}
+}
+
+}
+.post-list{
+	margin-block-start: 1em;
+
+	.post-entry{
+		margin-block-end: 1em;
+
+	}
+	.media{
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 200px;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+	}
+}
