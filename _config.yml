@@ -2,7 +2,7 @@
 source              : .
 destination         : ./_site
 
-url: https://rynne.es/Rynne-Jekyll-Template
+url: https://rynne.es/Rynne-Jekyll-Theme
 
 
 paginate: 5
