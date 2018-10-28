@@ -12,26 +12,8 @@
             {% include header-default.html %}
     {% endcase %}
 
-    <section class="container">
-        <!-- <div class="columns is-centered">
-            
-            <div class="column is-7"> -->
-                <div class="content">
-                    {{ content | inject_anchors }}
-                </div>
-
-            <!-- </div>
-            {% if page.toc %}
-            <aside class="column is-2">
-                <div class="box" id="page_sidebar">
-                    <div class="content">
-                            <h5>TOC</h5>
-                            {{ content | toc_only}}
-                        </div>
-                    </div>
-            </aside>
-            {% endif %}
-        </div> -->
+    <section class="section">
+        {{ content }}
     </section>
 
     {% include footer-default.html %}

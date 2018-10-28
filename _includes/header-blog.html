@@ -1,67 +1,11 @@
 <header class="hero is-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %} {% if page.header.gradient %}is-bold{% endif %} is-{% if page.header.size %}{{page.header.size}}{% else %}fullheight{% endif %}" {% if page.header.particles %}id="particles-js"{% endif %}>
   
-  {% if page.header.particles %}<script src="{{site.url}}/assets/particles.json"></script>{% endif %}
+  {% if page.header.particles %}<script src="{{ site.url }}{{ site.baseurl }}/assets/particles.json"></script>{% endif %}
   
 
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
-    <nav class="navbar"  role="navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-            {% if site.logo %}<img src="{{ site.logo }}" alt="Logo">{% else %}{{ site.title }}{% endif %}
-          </a>
-          <span class="navbar-burger burger has-text-white" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end" id="main-menu">
-              {% for item in site.main_nav %}
-              {%if item.button %}
-              <span class="navbar-item">
-                  <a class="button is-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %} is-inverted {% if item.url == page.url %}is-active{% endif %}"  href="{% if item.external %} {{ item.url }} {% else %} {{ site.url }}{{ item.url}} {% endif %}">
-                    {% if item.icon %}
-                    <span class="icon">
-                      <i class="{{ item.icon}}"></i>
-                    </span>
-                    {% endif %}
-                    <span>{{ item.title }}</span>
-                  </a>
-                </span>
-              {% else %}
-              <a class="navbar-item {% if item.url == page.url %}is-active{% endif %} {% if item.inverted == true %}is-inverted{% endif %}" href="{% if item.external %} {{ item.url }} {% else %} {{ site.url }}{{ item.url}} {% endif %}">
-                  {{ item.title }}
-              </a>
-              {% endif %}
-              {% endfor %}
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link is-arrowless is-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %}">
-                  More
-                </a>
-        
-                <div class="navbar-dropdown has-text-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %}">
-                  <a class="navbar-item">
-                    About
-                  </a>
-                  <a class="navbar-item">
-                    Jobs
-                  </a>
-                  <a class="navbar-item">
-                    Contact
-                  </a>
-                  <hr class="navbar-divider">
-                  <a class="navbar-item">
-                    Report an issue
-                  </a>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    {% include navigation.html%}
   </div>
 
   <!-- Hero content: will be in the middle -->
@@ -78,15 +22,6 @@
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
-    <!-- <nav class="tabs is-boxed">
-      <div class="container">
-        <ul id="main-tabs-list">
-          <li data-tab='tab1' class="is-active"><a>Overview</a></li>
-          <li data-tab='tab2'><a>Modifiers</a></li>
-          <li data-tab='tab3'><a>Grid</a></li>
-          <li data-tab='tab4'><a>Elements</a></li>
-        </ul>
-      </div>
-    </nav> -->
+    {% include page-section-tabs.html %}
   </div>
 </header>
