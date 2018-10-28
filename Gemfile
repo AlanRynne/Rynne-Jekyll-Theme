@@ -5,3 +5,4 @@ gemspec
 
 gem 'jekyll-toc'
 gem 'jekyll-paginate'
+gem 'jekyll-sitemap'

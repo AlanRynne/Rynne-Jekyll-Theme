@@ -2,7 +2,9 @@
 source              : .
 destination         : ./_site
 
-url: https://rynne.es/Rynne-Jekyll-Theme
+host: localhost
+url: https://rynne.es
+# baseurl: /Rynne-Jekyll-Theme
 
 
 paginate: 5
@@ -23,6 +25,7 @@ whitelist           : []
 plugins             : 
   - jekyll-toc
   - jekyll-paginate
+  - jekyll-sitemap
 
 toc:
   max_level: 2 # default: 6
