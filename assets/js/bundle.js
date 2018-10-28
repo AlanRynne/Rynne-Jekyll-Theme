@@ -8,7 +8,7 @@
 // -----------------
 const particles = require('particles.js');
 
-particlesJS.load('particles-js', '{{site.url}}/assets/particles.json', function () {
+particlesJS.load('particles-js', '{{ site.url }}{{ site.baseurl }}/assets/particles.json', function () {
     console.log('callback - particles.js config loaded');
 });
 // -----------------
