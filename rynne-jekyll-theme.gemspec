@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "AlanRynne"
+  spec.name          = "rynne-jekyll-theme"
   spec.version       = "0.1.0"
   spec.authors       = ["Alan Rynne"]
   spec.email         = ["alan@rynne.es"]
@@ -10,8 +10,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://rynne.es"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
-
+  spec.files = `git ls-files -z`.split("\x0").select do |f|
+    f.match(%r{^(_(includes|layouts|sass)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
+  end
+  
   spec.add_runtime_dependency "jekyll", "~> 3.8"
 
   spec.add_development_dependency "bundler", "~> 1.16"
