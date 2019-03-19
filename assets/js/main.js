@@ -5,7 +5,7 @@ const particles = require('particles.js');
 
 var base_url = window.location.origin;
 
-particlesJS.load('particles-js', base_url + '/assets/particles.json', function () {
+particlesJS.load('particles-js', './assets/particles.json', function () {
     console.log('callback - particles.js config loaded');
 });
 // -----------------
