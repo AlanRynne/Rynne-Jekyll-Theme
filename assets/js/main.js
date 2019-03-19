@@ -13,7 +13,7 @@ particlesJS.load('particles-js', './assets/particles.json', function () {
 // -----------------
 // Load Three.js from NPM
 // -----------------
-var THREE = require('three');
+var THREE = require('THREE');
 
 // -----------------
 
