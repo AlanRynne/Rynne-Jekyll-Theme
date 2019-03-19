@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
   "main": "assets/js/main.js",
+  "homepage": "https://AlanRynne.github.io/Rynne-Jekyll-Theme/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
