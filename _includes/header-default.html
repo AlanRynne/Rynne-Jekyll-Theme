@@ -22,7 +22,7 @@
               {% for item in site.main_nav %}
               {%if item.button %}
               <span class="navbar-item">
-                  <a class="button is-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %} is-inverted {% if item.url == page.url %}is-active{% endif %}"  href="{% if item.external %} {{ item.url }} {% else %} {{ site.url }}{{ item.url}} {% endif %}">
+                  <a class="button is-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %} is-inverted {% if item.url == page.url %}is-active{% endif %}"  href="{% if item.external %} {{ item.url }} {% else %} {{ site.url }}{{site.baseurl}}{{ item.url}} {% endif %}">
                     {% if item.icon %}
                     <span class="icon">
                       <i class="{{ item.icon}}"></i>
@@ -32,7 +32,7 @@
                   </a>
                 </span>
               {% else %}
-              <a class="navbar-item {% if item.url == page.url %}is-active{% endif %} {% if item.inverted == true %}is-inverted{% endif %}" href="{% if item.external %} {{ item.url }} {% else %} {{ site.url }}{{ item.url}} {% endif %}">
+              <a class="navbar-item {% if item.url == page.url %}is-active{% endif %} {% if item.inverted == true %}is-inverted{% endif %}" href="{% if item.external %} {{ item.url }} {% else %} {{ site.url }}{{site.baseurl}}{{ item.url}} {% endif %}">
                   {{ item.title }}
               </a>
               {% endif %}

@@ -3,7 +3,7 @@ source              : .
 destination         : ./_site
 
 url: https://rynne.es/Rynne-Jekyll-Theme
-
+baseurl: ""
 
 paginate: 5
 paginate_path: "/blog/page:num/"
