@@ -6,19 +6,20 @@
 
 <body>
     {% case page.layout %}
-        {% when 'blog' %}
-           {% include header-blog.html %}
-        {% else %}
-            {% include header-default.html %}
+    {% when 'blog' %}
+    {% include header-blog.html %}
+    {% else %}
+    {% include header-default.html %}
     {% endcase %}
+    
     <section class=section>
-    <div class="container">
-        <!-- <div class="columns is-centered">
+        <div class="container">
+            <!-- <div class="columns is-centered">
             
             <div class="column is-7"> -->
-                <div class="content">
-                    {{ content | inject_anchors }}
-                </div>
+            <div class="content">
+                {{ content | inject_anchors }}
+            </div>
 
             <!-- </div>
             {% if page.toc %}
@@ -32,8 +33,9 @@
             </aside>
             {% endif %}
         </div> -->
-    </div>
+        </div>
     </section>
+
     {% include footer-default.html %}
 
 </body>
