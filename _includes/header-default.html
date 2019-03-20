@@ -85,7 +85,7 @@
         <ul id="main-tabs-list">
           {% for tab in page.tabs %}
           <li data-tab='{{tab.name}}' class="{% if tabCounter == 0%}is-active{% endif %}"><a>{{tab.name}}</a></li>
-          {% assign tabCounter += 1 %}
+          {% assign tabCounter = (tabCounter + 1) %}
           {% endfor %}
         </ul>
       </div>
