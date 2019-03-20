@@ -78,15 +78,16 @@
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
+    {% if page.tabs %}
     <nav class="tabs is-boxed">
       <div class="container">
         <ul id="main-tabs-list">
-          <li data-tab='tab1' class="is-active"><a>Overview</a></li>
-          <li data-tab='tab2'><a>Modifiers</a></li>
-          <li data-tab='tab3'><a>Grid</a></li>
-          <li data-tab='tab4'><a>Elements</a></li>
+          {% for tab in page.tabs %}
+          <li data-tab='{{tab.name}}' class="is-active"><a>{{tab.name}}</a></li>
+          {% endfor %}
         </ul>
       </div>
     </nav>
+    {% endif %}
   </div>
 </header>
