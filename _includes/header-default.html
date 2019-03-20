@@ -37,7 +37,7 @@
               </a>
               {% endif %}
               {% endfor %}
-              <div class="navbar-item has-dropdown is-hoverable">
+              <!-- <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless is-{% if page.header.color %}{{page.header.color}}{% else %}primary{% endif %}">
                   More
                 </a>
@@ -57,7 +57,7 @@
                     Report an issue
                   </a>
                 </div>
-              </div>
+              </div> -->
           </div>
         </div>
       </div>
@@ -68,10 +68,10 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        {% if page.title %}{{ page.title }} {% else %} {{ site.title}} {% endif %}
+        {% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}
       </h1>
       <h2 class="subtitle">
-        {% if page.subtitle %}{{ page.subtitle }} {% else %} {{ site.subtitle}} {% endif %}
+        {% if page.subtitle %} {{ page.subtitle }} {% else %} {{ site.subtitle }} {% endif %}
       </h2>
     </div>
   </div>
