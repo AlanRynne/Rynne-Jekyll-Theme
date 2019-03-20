@@ -78,12 +78,14 @@
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
+    {% assign tabCounter = 0 %}
     {% if page.tabs %}
     <nav class="tabs is-boxed">
       <div class="container">
         <ul id="main-tabs-list">
           {% for tab in page.tabs %}
-          <li data-tab='{{tab.name}}' class="is-active"><a>{{tab.name}}</a></li>
+          <li data-tab='{{tab.name}}' class="{% if tabCounter == 0%}is-active{% endif %}"><a>{{tab.name}}</a></li>
+          {% assign tabCounter += 1 %}
           {% endfor %}
         </ul>
       </div>
