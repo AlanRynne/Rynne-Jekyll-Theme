@@ -4,13 +4,20 @@
   "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
   "main": "assets/js/main.js",
   "homepage": "https://AlanRynne.github.io/Rynne-Jekyll-Theme/",
+  "watch":{
+    "jekyllJS": "{src,jekyllJS}/assets/js/*.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "buildJS": "browserify assets/js/main.js -o assets/js/bundle.js",
+    "appendYAMLblock": "echo '---\n---' | cat - assets/js/bundle.js > temp && mv temp assets/js/bundle.js",
+    "jekyllJS": "npm run buildJS && npm run appendYAMLblock",
+    "watch": "npm-watch jekyllJS"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "assert": "^1.4.1",
+    "npm-watch": "^0.6.0",
     "particles.js": "^2.0.0",
     "three": "^0.97.0"
   }
