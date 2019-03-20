@@ -1,0 +1,13 @@
+{% if page.threejs %}
+<!-- Three.js visualizer -->
+<div id="three-div" obj="{{page.threejs.obj}}"></div>
+<script src="/assets/js/OBJLoader.js"></script>
+<script src="/assets/js/TrackballControls.js"></script>
+<script src="{{ page.threejs.script}}"></script>
+{% elsif page.image %}
+<!-- Image background -->
+{% else %}
+<!-- Particles overlay -->
+{% endif %}
+
+{% if page.image-author %} <div class="photo-cred"><p>Image by <a href="{{ page.image-author-link }}">{{ page.image-author }}</a></p></div> {% endif %}
