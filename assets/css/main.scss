@@ -156,10 +156,13 @@ a{
 	}
 }
 
-#navbarMenuHeroA {
-	background-color: black;
-	opacity: 0.7;
-	position: absolute;
-	right: 0;
-	width: 100%;
+@media screen and (max-width: 1087px)
+{
+	#navbarMenuHeroA {
+		background-color: black;
+		opacity: 0.7;
+		position: absolute;
+		right: 0;
+		width: 100%;
+	}
 }
